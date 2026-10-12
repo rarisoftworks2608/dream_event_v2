@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and form handler
+Disallow: /forms/
+Disallow: /components/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.dreamevent.in/sitemap.xml
+
+# Allow major search engines full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 10
