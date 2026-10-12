@@ -1280,3 +1280,48 @@ section.is-dark::after {
 .brand-logo-item img { height: 46px; width: auto; max-width: 160px; object-fit: contain; }
 .brand-logo-item:not(.is-text) { opacity: 1; }
 .brand-logo-item.is-text { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+
+/* ===== MOBILE POLISH (site-wide) ===== */
+img, iframe { max-width: 100%; }
+.hero-plain .hero-video-wrap video { max-width: none; }
+@media (max-width: 768px) {
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .about-stats-grid > div { padding: 1.2rem 0.6rem !important; }
+  .story-year-badge { left: 12px !important; bottom: 24px !important; padding: 1rem !important; }
+
+  /* About — journey: left rail timeline (dot left, text right) */
+  .journey-timeline { padding-left: 0; }
+  .journey-timeline::before { left: 24px; transform: none; }
+  .journey-item { display: grid !important; grid-template-columns: 48px 1fr !important; gap: 0 18px !important; align-items: start; margin-bottom: 2.2rem; }
+  .journey-item .journey-dot { grid-column: 1 !important; grid-row: 1 !important; }
+  .journey-item .journey-content { grid-column: 2 !important; grid-row: 1 !important; text-align: left !important; }
+  .journey-item .journey-empty { display: none !important; }
+
+  /* Contact — quick-contact strip: tidy stacked list, no stray dividers */
+  .quick-contact { flex-direction: column; align-items: flex-start !important; gap: 14px !important; padding-left: 24px; padding-right: 24px; }
+  .quick-contact .qc-sep { display: none; }
+
+  /* Weddings — type cards stack, tighter caption padding */
+  .wtype-grid { grid-template-columns: 1fr !important; gap: 1.2rem !important; }
+  .wtype-grid a > div { padding: 1.5rem !important; }
+  .wtype-grid h3 { font-size: 1.6rem !important; }
+
+  /* Home — corporate tiles: one per row, readable captions */
+  .corp-grid, .corporate-section .corp-grid { grid-template-columns: 1fr !important; gap: 12px; }
+  .corp-card { aspect-ratio: 16 / 10; }
+  .corp-card-info { padding: 20px 20px 22px; }
+  .corp-card-title { font-size: 1.3rem; }
+  .corp-card .corp-card-sub { font-size: 0.7rem !important; letter-spacing: 0.14em; line-height: 1.5; }
+
+  /* Home — culture cards: compact captions for 2-up grid */
+  .cultural-section .culture-card .culture-info { padding: 14px 14px 16px; }
+  .cultural-section .culture-name { font-size: 1.15rem; margin-bottom: 4px; }
+  .cultural-section .culture-tag { font-size: 0.6rem; letter-spacing: 0.12em; line-height: 1.5; }
+  .cultural-section .culture-card.featured .culture-name { font-size: 1.5rem; }
+
+  /* Home — founder row: name block full width, button below */
+  .wwa-founder { gap: 14px; }
+  .wwa-founder .wwa-founder-info { flex: 1 1 calc(100% - 80px); }
+  .wwa-founder .btn { flex: 1 1 100%; justify-content: center; text-align: center; }
+  .wwa-founder-sign { font-size: 1.7rem; }
+}
